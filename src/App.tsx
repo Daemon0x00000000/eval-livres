@@ -92,59 +92,9 @@ function App() {
       if (stringBooks) {
         return JSON.parse(stringBooks) as Book[]
       }
-      return [
-        {
-          bookid: 1,
-          title: 'Le Petit Prince',
-          description: 'Un livre pour enfants écrit par Antoine de Saint-Exupéry',
-          stock: 5,
-        },
-        {
-          bookid: 2,
-          title: 'Les Misérables',
-          description: 'Un roman écrit par Victor Hugo',
-          stock: 0,
-        },
-        {
-          bookid: 3,
-          title: 'Le Rouge et le Noir',
-          description: 'Un roman écrit par Stendhal',
-          stock: 3,
-        },
-        {
-          bookid: 4,
-          title: 'Les Trois Mousquetaires',
-          description: 'Un roman écrit par Alexandre Dumas',
-          stock: 10,
-        }
-      ] as Book[]
+      return initialBooks as Book[]
     } catch {
-      return [
-        {
-          bookid: 1,
-          title: 'Le Petit Prince',
-          description: 'Un livre pour enfants écrit par Antoine de Saint-Exupéry',
-          stock: 5,
-        },
-        {
-          bookid:2,
-          title: 'Les Misérables',
-          description: 'Un roman écrit par Victor Hugo',
-          stock: 0,
-        },
-        {
-          bookid:3,
-          title: 'Le Rouge et le Noir',
-          description: 'Un roman écrit par Stendhal',
-          stock: 3,
-        },
-        {
-          bookid:4,
-          title: 'Les Trois Mousquetaires',
-          description: 'Un roman écrit par Alexandre Dumas',
-          stock: 10,
-        }
-      ] as Book[]
+      return initialBooks as Book[]
     }
   })
   const [firstRender, setFirstRender] = useState(true)
@@ -170,7 +120,7 @@ function App() {
           background: 'red',
           color: 'white',
           cursor: 'pointer'
-        }}>Clear</button>
+        }}>Réinitialiser</button>
         <Routes>
           <Route path='/' element={<HomePage/>}/>
           <Route path='/add' element={<AddBookPage/>}/>
