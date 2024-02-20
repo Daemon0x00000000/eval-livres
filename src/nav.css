@@ -1,0 +1,45 @@
+
+
+nav {
+    position: sticky;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    align-items: center;
+    background-color: #f2f2f2;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+    & > ul {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        list-style: none;
+        width: 100%;
+
+        & > li {
+            margin: 0 1rem;
+            font-size: 1.2rem;
+            font-weight: 600;
+            cursor: pointer;
+
+            &:hover {
+                color: #f2f2f2;
+            }
+
+            & > a {
+                text-decoration: none;
+                color: #242424;
+                width: 50%;
+
+                &:hover {
+                    color: blue;
+                }
+
+                &.active {
+                    color: blue;
+                }
+
+            }
+        }
+    }
+}
